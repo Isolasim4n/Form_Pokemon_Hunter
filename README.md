@@ -5,10 +5,10 @@ yaitu nama harus terdiri dari 3 huruf, dan tidak boleh kosong. Kemudian pada ala
 dan tidak boleh kosong. Sedangkan di bagian checkbox tidak memilih juga tidak masalah.
 
 
-![Alt Text](E:/Materi SMK/XIRPPL3/PPB/Tugas 01/SS1.JPG)
-![Alt Text](E:/Materi SMK/XIRPPL3/PPB/Tugas 01/SS2.JPG)
-![Alt Text](E:/Materi SMK/XIRPPL3/PPB/Tugas 01/SS3.JPG)
-![Alt Text](E:/Materi SMK/XIRPPL3/PPB/Tugas 01/SS4.JPG)
+![Alt Text](https://github.com/Isolasim4n/Form_Pokemon_Hunter/blob/master/SS1.JPG)
+![Alt Text](https://github.com/Isolasim4n/Form_Pokemon_Hunter/blob/master/SS2.JPG)
+![Alt Text](https://github.com/Isolasim4n/Form_Pokemon_Hunter/blob/master/SS3.JPG)
+![Alt Text](https://github.com/Isolasim4n/Form_Pokemon_Hunter/blob/master/SS4.JPG)
 
 Nama : Prasetya Adi Arfanto 
 Kelas : XI RPL 3 
