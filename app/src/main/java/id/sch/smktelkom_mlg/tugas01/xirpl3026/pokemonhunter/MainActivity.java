@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
             String id = Nm.getText().toString();
             String place = loc.getText().toString();
             String hasil = null;
+            String hasili = "\n Anda akan Membeli starter item : \n";
+            int startlen = hasili.length();
             if (L.isChecked()) {
                 hasil = L.getText().toString();
             }
@@ -66,8 +68,17 @@ public class MainActivity extends AppCompatActivity {
             if (hasil == null) {
                 tvHasil.setText("Anda belum memilih jenis kelamin");
             } else {
-                tvHasil.setText("Nama Anda " + id + " ,anda beralamat di " + place + ". Anda ber jenis kelamin : " + hasil);
-        }
+                if (UlB.isChecked()) hasili += UlB.getText() + "\n";
+                if (HyP.isChecked()) hasili += HyP.getText() + "\n";
+                if (LuM.isChecked()) hasili += LuM.getText() + "\n";
+                if (LuE.isChecked()) hasili += LuE.getText() + "\n";
+
+                if (hasili.length() == startlen) hasili += "\nTidak Ada";
+
+                tvHasil.setText("Nama Anda : " + id + "\nAnda beralamat di :" + place + "\nJenis Kelamin Anda : "
+                        + hasil + hasili);
+            }
+
         }
     }
 
@@ -85,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Nm.setError(null);
         }
-        if (place.isEmpty())
+        if (place.isEmpty()) {
             loc.setError("Alamat belum diisi");
+            valid = false;
+        }
         else {
             loc.setError(null);
         }
-
-
         return valid;
     }
 }
