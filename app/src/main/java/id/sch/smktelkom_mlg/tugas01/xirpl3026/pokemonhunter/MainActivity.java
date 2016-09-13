@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Button ButtonOk;
     TextView tvHasil;
     Spinner spTeam;
+
+    /*RadioGroup JeK;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         L = (RadioButton) findViewById(R.id.male);
         P = (RadioButton) findViewById(R.id.Female);
+      /*  JeK= (RadioGroup) findViewById(R.id.Jk);*/
 
         UlB = (CheckBox) findViewById(R.id.UB);
         HyP = (CheckBox) findViewById(R.id.HP);
@@ -35,12 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         spTeam = (Spinner) findViewById(R.id.spinner);
 
+        ButtonOk = (Button) findViewById(R.id.buttonOK);
+
         tvHasil = (TextView) findViewById(R.id.hsl);
 
-        findViewById(ButtonOk).setOnClickListener(new View.OnClickListener() {
+        ButtonOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                doclick()
+                doclick();
             }
         });
 
@@ -51,9 +56,21 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String id = Nm.getText().toString();
             String place = loc.getText().toString();
-            tvHasil.setText(id + " beralamat di " + place);
+            String hasil = null;
+            if (L.isChecked()) {
+                hasil = L.getText().toString();
+            }
+            if (P.isChecked()) {
+                hasil = P.getText().toString();
+            }
+            if (hasil == null) {
+                tvHasil.setText("Anda belum memilih jenis kelamin");
+            } else {
+                tvHasil.setText("Nama Anda " + id + " ,anda beralamat di " + place + ". Anda ber jenis kelamin : " + hasil);
+        }
         }
     }
+
 
     private boolean isValid() {
         String id = Nm.getText().toString();
@@ -73,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
         else {
             loc.setError(null);
         }
+
+
         return valid;
     }
 }
