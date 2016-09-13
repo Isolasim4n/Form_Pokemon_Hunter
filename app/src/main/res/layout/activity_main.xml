@@ -21,17 +21,25 @@
             android:layout_height="200dp"
             android:src="@drawable/pokemon" />
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <EditText
             android:id="@+id/Nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama" />
+            android:hint="Nama" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <EditText
             android:id="@+id/Alamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Alamat" />
+            android:hint="Alamat" />
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:id="@+id/textView"
@@ -74,14 +82,14 @@
                 android:text="Ultra Ball" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/HP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="Hyper Potion" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/LM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
@@ -89,10 +97,29 @@
         </RadioGroup>
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/LE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Lucky Egg" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/Team" />
+
+        <Button
+            android:id="@+id/buttonOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/hsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil" />
     </LinearLayout>
 </ScrollView>

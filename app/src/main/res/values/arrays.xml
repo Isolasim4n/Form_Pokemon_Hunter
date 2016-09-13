@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Team">
+        <item>Team Valor</item>
+        <item>Team Mystic</item>
+        <item>Team Insict</item>
+    </string-array>
+</resources>
