@@ -105,7 +105,7 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="match_parent"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:entries="@array/Team" />
 

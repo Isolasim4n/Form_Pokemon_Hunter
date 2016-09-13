@@ -73,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 if (LuM.isChecked()) hasili += LuM.getText() + "\n";
                 if (LuE.isChecked()) hasili += LuE.getText() + "\n";
 
-                if (hasili.length() == startlen) hasili += "\nTidak Ada";
+                if (hasili.length() == startlen) hasili += "Tidak Ada";
 
                 tvHasil.setText("Nama Anda : " + id + "\nAnda beralamat di :" + place + "\nJenis Kelamin Anda : "
-                        + hasil + hasili);
+                        + hasil + hasili + "\n Anda akan bergabung dengan : " + spTeam.getSelectedItem().toString());
             }
 
         }
